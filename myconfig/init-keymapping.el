@@ -22,7 +22,4 @@
 (global-set-key "\C-h\ \C-k" 'find-function-on-key)
 
 
-
-
-
 (provide 'init-keymapping)

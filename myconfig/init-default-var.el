@@ -11,6 +11,7 @@
 (global-company-mode t)
 (delete-selection-mode t)
 
+(fset 'yes-or-no-p 'y-or-n-p)
 
 
 

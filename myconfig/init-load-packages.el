@@ -8,6 +8,7 @@
 (defvar hsh/packages '(
 	       ;; --- Auto-completion ---
 	       company
+	       popwin
 	       monokai-theme
 	       hungry-delete
 	       swiper
@@ -55,6 +56,10 @@
       (append
        '(("\\.js\\'" . js2-mode))
        auto-mode-alist))
+
+;;光标自动跟踪到新建的窗口
+(require 'popwin)
+(popwin-mode t)
 
 
 (provide 'init-load-packages)

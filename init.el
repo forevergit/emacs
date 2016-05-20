@@ -1,4 +1,4 @@
-;;Happy Hacking init Emacs
+
 ;;load package
 
 (package-initialize)

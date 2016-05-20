@@ -15,14 +15,17 @@
 
 ;; 更改显示字体大小 16pt
 ;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
-(set-face-attribute 'default nil :height 100)
+(set-face-attribute 'default nil :height 120)
 
 ;; 开启全屏
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
 ;; 高亮单前行
-(global-hl-line-mode t)
+(global-hl-line-mode 1)
+
+;; 显示行号
+(global-linum-mode t)
 
 
 ;; 加载主题
