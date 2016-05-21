@@ -1,4 +1,5 @@
 
+
 ;; 这一行代码，将函数 open-init-file 绑定到 <f2> 键上
 (global-set-key (kbd "<f2>") 'open-init-file)
 
@@ -22,4 +23,32 @@
 (global-set-key "\C-h\ \C-k" 'find-function-on-key)
 
 
+;;对整个git项目下的文件进行搜索 --todo 有问题某些模式无法工作需排查
+
+(global-set-key (kbd "C-c p f") 'counsel-git)
+
+;;代码缩进
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+
+;;hippie-expand 在company没法补全的情况下，手动补全
+(global-set-key (kbd "C-M-/") 'hippie-expand)
+
+;; 延迟加载
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
+
+;;自动获取光标所在的词作为搜索条件
+(global-set-key (kbd "M-s o") 'occur-dwim)
+
+(global-set-key (kbd "M-s i") 'counsel-imenu)
+
+;;如果一个buffer没有修改，关闭不用提示
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
+
+;;快速打开org模板
+(global-set-key (kbd "C-c c") 'org-capture)
+(global-set-key (kbd "C-c a") 'org-agenda)
+
 (provide 'init-keymapping)
+
