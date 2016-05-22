@@ -6,7 +6,7 @@
 			   ))
   )
 
-;; cl - Common Lisp Extension
+;; cl - Common Lisp Extensionq
 (require 'cl)
 
 ;; Add Packages
@@ -25,7 +25,13 @@
 		       iedit
 		       ;;番茄工作法
 		       org-pomodoro
-		       
+		       ;;fs search
+		       helm-ag
+		       ;;to vim edit mode
+		       evil 
+		       window-numbering
+		       which-key
+		       python-mode
 
 		       ) "Default packages")
 
@@ -88,5 +94,8 @@
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+(evil-mode t)
+(window-numbering-mode t)
+(which-key-mode t)
 
 (provide 'init-load-packages)

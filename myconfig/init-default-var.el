@@ -67,6 +67,9 @@
 (sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil)
 
 
+;;file system search tools (search speed ag>pg>ack>grep)
+
+
 
 (provide 'init-default-var)
 

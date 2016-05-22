@@ -23,7 +23,7 @@
 (global-set-key "\C-h\ \C-k" 'find-function-on-key)
 
 
-;;对整个git项目下的文件进行搜索 --todo 有问题某些模式无法工作需排查
+;;对整个git项目下的文件进行搜索(必须在git项目下才有用)
 
 (global-set-key (kbd "C-c p f") 'counsel-git)
 
@@ -42,6 +42,7 @@
 (global-set-key (kbd "M-s o") 'occur-dwim)
 
 (global-set-key (kbd "M-s i") 'counsel-imenu)
+(global-set-key (kbd "M-s e") 'iedit-mode)
 
 ;;如果一个buffer没有修改，关闭不用提示
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
@@ -50,5 +51,14 @@
 (global-set-key (kbd "C-c c") 'org-capture)
 (global-set-key (kbd "C-c a") 'org-agenda)
 
+;;修改company补全下拉框选择的快捷键
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous))
+
+;;C-w 来使其可以向后删除一个单词，这样就可以与 Shell 中的快捷键操作同步
+(global-set-key (kbd "C-w") 'backward-kill-word) 
 (provide 'init-keymapping)
 
