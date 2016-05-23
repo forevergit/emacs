@@ -7,7 +7,7 @@
  '(company-minimum-prefix-length 1)
  '(package-selected-packages
    (quote
-    (2048-game python-mode company monokai-theme hungry-delete swiper smartparens popwin js2-mode expand-region iedit org-pomodoro helm-ag evil window-numbering which-key)))
+    (counsel 2048-game python-mode company monokai-theme hungry-delete swiper smartparens popwin js2-mode expand-region iedit org-pomodoro helm-ag evil window-numbering which-key)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 40)
  '(show-paren-mode t)

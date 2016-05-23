@@ -1,1 +1,5 @@
 auto-save-list/
+.cask
+elpa/
+recentf
+recentf~
