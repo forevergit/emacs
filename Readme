@@ -1,0 +1,4 @@
+当前版本是采用cask+pallet管理包
+使用前配置
+1.安装cask软件 (github search cask)
+2.cask安装目录必须在～/.cask(init.el中引入cask环境采用的是这个路径)

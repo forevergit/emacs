@@ -1,59 +1,6 @@
-(when (>= emacs-major-version 24)
-  (setq package-archives '(
-			   ;;("melpa" . "http://melpa.org/packages/")
-			   ("gnu"   . "http://elpa.zilongshanren.com/gnu/")
-			   ("melpa" . "http://elpa.zilongshanren.com/melpa/")
-			   ))
-  )
-
-;; cl - Common Lisp Extensionq
-(require 'cl)
-
-;; Add Packages
-(defvar hsh/packages '(
-		       ;; --- Auto-completion ---
-		       company
-		       monokai-theme
-		       hungry-delete
-		       swiper
-		       smartparens
-		       popwin
-		       js2-mode
-		       ;;选择字符
-		       expand-region
-		       ;;多区域编辑
-		       iedit
-		       ;;番茄工作法
-		       org-pomodoro
-		       ;;fs search
-		       helm-ag
-		       ;;to vim edit mode
-		       evil 
-		       window-numbering
-		       which-key
-		       python-mode
-
-		       ) "Default packages")
-
-(setq package-selected-packages hsh/packages)
-
-(defun hsh/packages-installed-p ()
-  (loop for pkg in hsh/packages
-	when (not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
-(unless (hsh/packages-installed-p)
-  (message "%s" "Refreshing package database...")
-  (package-refresh-contents)
-  (dolist (pkg hsh/packages)
-    (when (not (package-installed-p pkg))
-      (package-install pkg))))
-
 ;; Find Executable Path on OS X
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
-
-
-
 
 ;;开启最近浏览的
 (require 'recentf)
@@ -94,7 +41,7 @@
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
-(evil-mode t)
+;;(evil-mode t)
 (window-numbering-mode t)
 (which-key-mode t)
 

@@ -7,12 +7,14 @@
  '(company-minimum-prefix-length 1)
  '(package-selected-packages
    (quote
-    (counsel 2048-game python-mode company monokai-theme hungry-delete swiper smartparens popwin js2-mode expand-region iedit org-pomodoro helm-ag evil window-numbering which-key)))
+    (goto-chg helm-core pallet popup s shut-up undo-tree counsel 2048-game python-mode company monokai-theme hungry-delete swiper smartparens popwin js2-mode expand-region iedit org-pomodoro helm-ag evil window-numbering which-key)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 40)
  '(show-paren-mode t)
  '(tool-bar-mode nil)
- '(which-key-idle-delay 0.08))
+ '(transient-mark-mode (quote (only . t)))
+ '(which-key-echo-keystrokes 0.25)
+ '(which-key-idle-delay 0.8))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

@@ -2,9 +2,16 @@
 
 ;;load package
 
-(setenv "HOME" "d:/")
+;;(setenv "HOME" "d:/")
 
 (package-initialize)
+
+
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+(require 'pallet)
+(pallet-mode t)
+
 (add-to-list 'load-path "~/.emacs.d/myconfig/")
 
 ;; 快速打开配置文件
