@@ -7,7 +7,7 @@
  '(company-minimum-prefix-length 1)
  '(package-selected-packages
    (quote
-    (goto-chg helm-core pallet popup s shut-up undo-tree counsel 2048-game python-mode company monokai-theme hungry-delete swiper smartparens popwin js2-mode expand-region iedit org-pomodoro helm-ag evil window-numbering which-key)))
+    (use-package goto-chg helm-core pallet popup s shut-up undo-tree counsel 2048-game python-mode company monokai-theme hungry-delete swiper smartparens popwin js2-mode expand-region iedit org-pomodoro helm-ag evil window-numbering which-key)))
  '(popwin:popup-window-position (quote right))
  '(popwin:popup-window-width 40)
  '(show-paren-mode t)
